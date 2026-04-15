@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // ADD THIS LINE BELOW
+  base: "/fictional-octo-carnival/", 
   server: {
     host: "::",
     port: 8080,

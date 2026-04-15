@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 3%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 80%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 90%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 40%;
+
+    --radius: 0.375rem;
+
+    --surface-elevated: 0 0% 8%;
+    --surface-hover: 0 0% 12%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 80%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 0 0% 40%;
+
+    --font-heading: 'Space Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground));
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .surface-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+  .surface-hover {
+    background-color: hsl(var(--surface-hover));
+  }
+}
